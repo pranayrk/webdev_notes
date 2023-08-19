@@ -7,4 +7,3 @@
 * [Databases and Caching](databases/README.md)
 * [Other](other/README.md)
 * [Interview Specific](interview_specific/README.md)
-

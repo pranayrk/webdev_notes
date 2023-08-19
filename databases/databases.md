@@ -1,2 +1,2 @@
-## [Databases](databases/databases.md)
+## Databases
 

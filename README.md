@@ -1,5 +1,4 @@
-## Web Dev Notes
-
+# Web Dev Notes
 `Pranay Raja Krishnan`
 
 ## Index
@@ -8,7 +7,4 @@
 * [Databases](databases/databases.md)
 * [Coding Problems](coding_problems/coding_problems.md)
 * [Other](other/other.md)
-* [Resources](resources/resources.md)
-
-## Resources
 

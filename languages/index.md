@@ -5,4 +5,3 @@
 * [C](c/c.md)
 * [Python](python/python.md)
 * [HTML and CSS](html_and_css/html_and_css.md)
-

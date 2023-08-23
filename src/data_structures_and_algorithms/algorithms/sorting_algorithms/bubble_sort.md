@@ -1,5 +1,6 @@
-##### Bubble Sort
-```
+<section>
+<h5>Bubble Sort</h5>
+<pre><code class="language-c">
 void bubbleSort(int arr[], int n) {
     int i, j;
     bool swapped;
@@ -18,5 +19,5 @@ void bubbleSort(int arr[], int n) {
             break;
     }
 }
-```
----
+</code></pre>
+</section>

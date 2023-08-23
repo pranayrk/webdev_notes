@@ -17,34 +17,17 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-                <section data-markdown>
 
+<section data-markdown>
 # Web Dev Notes
 #### Pranay Raja Krishnan
----
+</section>
 
-## Languages and Frameworks
----
-
-### C
----
-
-### Java
----
-
-### Javascript
----
-
-### Python
----
-
-### HTML and CSS
----
-
+<section data-markdown>
 ## Data Structures and Algorithms
----
+</section>
 
-
+<section data-markdown>
 ### Basic Data Structures
 
 * Dynamic Array
@@ -55,8 +38,9 @@
 * Binary Heaps & Priority Queue
 * Graphs
 * Trie
----
+</section>
 
+<section data-markdown>
 ### Basic Algorithms
 
 * Bit Manipulation & Numbers
@@ -65,8 +49,6 @@
 * Quicksort
 * Heapsort — Sort it in-place to get O(1) space
 * Binary Search
----
-### Basic Algorithms
 * Selections — Kth Smallest Elements (Sort, QuickSelect, Mediums of Mediums) — Implement all three ways
 * Permutations
 * Subsets
@@ -80,8 +62,6 @@
 * NP-Complete (Video) — Just know the concept
 * Topological Sort
 * Detect cycle in an undirected graph
----
-### Basic Algorithms
 * Detect a cycle in a directed graph
 * Count connected components in a graph
 * Find strongly connected components in a graph
@@ -96,18 +76,34 @@
 * Write the merge sort algorithm
 * Write the quicksort algorithm
 * Print binary tree using DFS (in-order, preorder and post order — all three of them) and BFS.
----
-### Basic Algorithms
 * Memorize time & space complexities for common algorithms. [Here](https://www.bigocheatsheet.com/)’s an interesting website.
 * Implement a trie.
 * Learn [these](https://www.geeksforgeeks.org/bit-tricks-competitive-programming/) important bit manipulation tricks.
----
+</section>
 
+<section data-markdown>
 #### Sorting Algorithms
----
+</section>
 
-##### Bubble Sort
-```
+<section data-markdown>
+#### Comparison of Sorting Algorithms
+
+| Sorting Algorithms | Best Case Time | Average Case Time | Worst Case Time | Worst Case Space |
+|---|---|---|---|---|
+| Bubble Sort | $O(n)$ | $O(n^2)$ | $O(n^2)$ | $O(1)$ |
+| Selection Sort | $O(n^2)$ | $O(n^2)$ | $O(n^2)$ | $O(1)$ |
+| Insertion Sort | $O(n)$ | $O(n^2)$ | $O(n^2)$ | $O(1)$ |
+| Merge Sort | $O(n \log (n))$ |  $O(n \log (n))$ | $O(n \log (n))$ | $O(n)$ |
+| Quick Sort | $O(n \log (n))$ | $O(n \log (n))$ | $O(n^2))$ | $O(n)$ |
+| Heap Sort |  $O(n \log (n))$ | $O(n \log (n))$ | $O(n \log (n))$ | $O(1)$ |
+| Counting Sort | $O(n + k)$ | $O(n + k)$ | $O(n + k)$ | $O(k)$ |
+| Radix Sort | $O(nk)$ | $O(nk)$ | $O(nk)$ | $O(n + k)$ |
+| Bucket Sort | $O(n + k)$  | $O(n + k)$  | $O(n^2)$ | $O(n)$ |
+</section>
+
+<section>
+<h5>Bubble Sort</h5>
+<pre><code class="language-c">
 void bubbleSort(int arr[], int n) {
     int i, j;
     bool swapped;
@@ -126,32 +122,383 @@ void bubbleSort(int arr[], int n) {
             break;
     }
 }
-```
----
+</code></pre>
+</section>
 
-## Databases and Cache
----
+<section>
+<h5>Selection Sort</h5>
+<pre><code class="language-c">
+void selectionSort(int arr[], int n) {
+    int i, j, min_idx;
 
-## Interview Specific
----
-##### Interview Resources
-* [Jwasham's interview university](https://github.com/jwasham/coding-interview-university)
-* [iDeserve Programming Interview Questions Playlist](https://www.youtube.com/playlist?list=PLamzFoFxwoNjPfxzaWqs7cZGsPYy0x_gI)
----
-##### Coding Problems Resources
-* [LeetCode Blind 75](https://leetcode.com/list/xi4ci4ig/)
-* [LeetCode 150](https://leetcode.com/studyplan/top-interview-150/)
-* [NeetCode 150](https://github.com/th-blitz/NeetCode-150)
-* [LeetCode Grind 75](https://www.techinterviewhandbook.org/grind75)
-* [LeetCode Interview Questions Collection](https://leetcode.com/explore/interview/card/top-interview-questions-easy/)
-* [Nick White, LeetCode Solutions Playlist](https://www.youtube.com/playlist?list=PLU_sdQYzUj2keVENTP0a5rdykRSgg9Wp-)
-* [Fisher Code, LeetCode Grind 75 Solutions](https://www.youtube.com/playlist?list=PLK0ZC7fyo01KN6t9EkPDjcwfgdn2fB30o)
----
+    // One by one move boundary of unsorted subarray
+    for (i = 0; i < n-1; i++) {
+        // Find the minimum element in unsorted array
+        min_idx = i;
+        for (j = i+1; j < n; j++) {
+            if (arr[j] < arr[min_idx]) {
+                min_idx = j;
+            }
+        }
 
-## Other
----
+        // Swap the found minimum element with the first element
+        if(min_idx != i) {
+            swap(&arr[min_idx], &arr[i]);
+        }
+    }
+}
+</code></pre>
+</section>
 
-                </section>
+<section>
+<h5>Insertion Sort</h5>
+<pre><code class="language-c">
+void insertionSort(int arr[], int n) {
+    int i, key, j;
+    for (i = 1; i < n; i++) {
+        key = arr[i];
+        j = i - 1;
+
+        /* Move elements of arr[0..i-1], that are
+          greater than key, to one position ahead
+          of their current position */
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
+        arr[j + 1] = key;
+    }
+}</code></pre>
+</section>
+
+<section>
+<h5>Merge Sort</h5>
+<pre><code class="language-c">
+void merge(int arr[], int l, int m, int r)
+{
+    int i, j, k;
+    int n1 = m - l + 1;
+    int n2 = r - m;
+ 
+    // Create temp arrays
+    int L[n1], R[n2];
+ 
+    // Copy data to temp arrays L[] and R[]
+    for (i = 0; i < n1; i++)
+        L[i] = arr[l + i];
+    for (j = 0; j < n2; j++)
+        R[j] = arr[m + 1 + j];
+ 
+    // Merge the temp arrays back into arr[l..r
+    i = 0;
+    j = 0;
+    k = l;
+    while (i < n1 && j < n2) {
+        if (L[i] <= R[j]) {
+            arr[k] = L[i];
+            i++;
+        }
+        else {
+            arr[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+ 
+    // Copy the remaining elements of L[],
+    // if there are any
+    while (i < n1) {
+        arr[k] = L[i];
+        i++;
+        k++;
+    }
+ 
+    // Copy the remaining elements of R[],
+    // if there are any
+    while (j < n2) {
+        arr[k] = R[j];
+        j++;
+        k++;
+    }
+}
+ 
+// l is for left index and r is right index of the
+// sub-array of arr to be sorted
+void mergeSort(int arr[], int l, int r)
+{
+    if (l < r) {
+        int m = l + (r - l) / 2;
+ 
+        // Sort first and second halves
+        mergeSort(arr, l, m);
+        mergeSort(arr, m + 1, r);
+ 
+        merge(arr, l, m, r);
+    }
+}
+</code></pre>
+</section>
+
+<section>
+<h5>Quick Sort</h5>
+<pre><code class="language-c">
+// Function to swap two elements
+void swap(int* a, int* b)
+{
+    int t = *a;
+    *a = *b;
+    *b = t;
+}
+ 
+// Partition the array using the last element as the pivot
+int partition(int arr[], int low, int high)
+{
+    // Choosing the pivot
+    int pivot = arr[high];
+ 
+    // Index of smaller element and indicates
+    // the right position of pivot found so far
+    int i = (low - 1);
+ 
+    for (int j = low; j <= high - 1; j++) {
+ 
+        // If current element is smaller than the pivot
+        if (arr[j] < pivot) {
+ 
+            // Increment index of smaller element
+            i++;
+            swap(&arr[i], &arr[j]);
+        }
+    }
+    swap(&arr[i + 1], &arr[high]);
+    return (i + 1);
+}
+ 
+// The main function that implements QuickSort
+// arr[] --> Array to be sorted,
+// low --> Starting index,
+// high --> Ending index
+void quickSort(int arr[], int low, int high)
+{
+    if (low < high) {
+ 
+        // pi is partitioning index, arr[p]
+        // is now at right place
+        int pi = partition(arr, low, high);
+ 
+        // Separately sort elements before
+        // partition and after partition
+        quickSort(arr, low, pi - 1);
+        quickSort(arr, pi + 1, high);
+    }
+}
+</code></pre>
+</section>
+
+<section>
+<h5>Heap Sort</h5>
+<pre><code class="language-c">
+// To heapify a subtree rooted with node i
+// which is an index in arr[].
+// n is size of heap
+void heapify(int arr[], int N, int i)
+{
+ 
+    // Initialize largest as root
+    int largest = i;
+ 
+    // left = 2*i + 1
+    int l = 2 * i + 1;
+ 
+    // right = 2*i + 2
+    int r = 2 * i + 2;
+ 
+    // If left child is larger than root
+    if (l < N && arr[l] > arr[largest])
+        largest = l;
+ 
+    // If right child is larger than largest
+    // so far
+    if (r < N && arr[r] > arr[largest])
+        largest = r;
+ 
+    // If largest is not root
+    if (largest != i) {
+        swap(arr[i], arr[largest]);
+ 
+        // Recursively heapify the affected
+        // sub-tree
+        heapify(arr, N, largest);
+    }
+}
+ 
+// Main function to do heap sort
+void heapSort(int arr[], int N)
+{
+ 
+    // Build heap (rearrange array)
+    for (int i = N / 2 - 1; i >= 0; i--)
+        heapify(arr, N, i);
+ 
+    // One by one extract an element
+    // from heap
+    for (int i = N - 1; i > 0; i--) {
+ 
+        // Move current root to end
+        swap(arr[0], arr[i]);
+ 
+        // call max heapify on the reduced heap
+        heapify(arr, i, 0);
+    }
+}
+</code></pre>
+</section>
+
+<section>
+<h5>Counting Sort</h5>
+<pre><code class="language-c">
+void countSort(char arr[])
+{
+    // The output character array that will have sorted arr
+    char output[strlen(arr)];
+
+    // Create a count array to store count of individual
+    // characters and initialize count array as 0
+    int count[RANGE + 1], i;
+    memset(count, 0, sizeof(count));
+
+    // Store count of each character
+    for (i = 0; arr[i]; ++i)
+        ++count[arr[i]];
+
+    // Change count[i] so that count[i] now contains actual
+    // position of this character in output array
+    for (i = 1; i <= RANGE; ++i)
+        count[i] += count[i - 1];
+
+    // Build the output character array
+    for (i = 0; arr[i]; ++i) {
+        output[count[arr[i]] - 1] = arr[i];
+        --count[arr[i]];
+    }
+
+    /*
+     For Stable algorithm
+     for (i = sizeof(arr)-1; i>=0; --i)
+    {
+        output[count[arr[i]]-1] = arr[i];
+        --count[arr[i]];
+    }
+
+    For Logic : See implementation
+    */
+
+    // Copy the output array to arr, so that arr now
+    // contains sorted characters
+    for (i = 0; arr[i]; ++i)
+        arr[i] = output[i];
+}
+</code></pre>
+</section>
+
+<section>
+<h5>Radix Sort</h5>
+<pre><code class="language-c">
+// A utility function to get maximum
+// value in arr[]
+int getMax(int arr[], int n)
+{
+    int mx = arr[0];
+    for (int i = 1; i < n; i++)
+        if (arr[i] > mx)
+            mx = arr[i];
+    return mx;
+}
+
+// A function to do counting sort of arr[]
+// according to the digit
+// represented by exp.
+void countSort(int arr[], int n, int exp)
+{
+
+    // Output array
+    int output[n];
+    int i, count[10] = { 0 };
+
+    // Store count of occurrences
+    // in count[]
+    for (i = 0; i < n; i++)
+        count[(arr[i] / exp) % 10]++;
+
+    // Change count[i] so that count[i]
+    // now contains actual position
+    // of this digit in output[]
+    for (i = 1; i < 10; i++)
+        count[i] += count[i - 1];
+
+    // Build the output array
+    for (i = n - 1; i >= 0; i--) {
+        output[count[(arr[i] / exp) % 10] - 1] = arr[i];
+        count[(arr[i] / exp) % 10]--;
+    }
+
+    // Copy the output array to arr[],
+    // so that arr[] now contains sorted
+    // numbers according to current digit
+    for (i = 0; i < n; i++)
+        arr[i] = output[i];
+}
+
+// The main function to that sorts arr[]
+// of size n using Radix Sort
+void radixsort(int arr[], int n)
+{
+
+    // Find the maximum number to
+    // know number of digits
+    int m = getMax(arr, n);
+
+    // Do counting sort for every digit.
+    // Note that instead of passing digit
+    // number, exp is passed. exp is 10^i
+    // where i is current digit number
+    for (int exp = 1; m / exp > 0; exp *= 10)
+        countSort(arr, n, exp);
+}
+</code></pre>
+</section>
+
+<section>
+<h5>Bucket Sort</h5>
+<pre><code class="language-c">
+void bucketSort(float arr[], int n)
+{
+    // 1) Create n empty buckets
+    vector<float> b[n];
+
+    // 2) Put array elements
+    // in different buckets
+    for (int i = 0; i < n; i++) {
+        // Index in bucket
+        int bi = n * arr[i];
+        b[bi].push_back(arr[i]);
+    }
+
+    // 3) Sort individual buckets
+    for (int i = 0; i < n; i++) {
+        sort(b[i].begin(), b[i].end());
+    }
+
+    // 4) Concatenate all buckets into arr[]
+    int index = 0;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < b[i].size(); j++) {
+            arr[index++] = b[i][j]; }
+    }
+}
+</code></pre>
+</section>
+
 			</div>
 		</div>
 

@@ -1,0 +1,12 @@
+map:
+  - sorting_algorithms.md
+  - sorting_comparison.md
+  - bubble_sort.md
+  - selection_sort.md
+  - insertion_sort.md
+  - merge_sort.md
+  - quick_sort.md
+  - heap_sort.md
+  - counting_sort.md
+  - radix_sort.md
+  - bucket_sort.md

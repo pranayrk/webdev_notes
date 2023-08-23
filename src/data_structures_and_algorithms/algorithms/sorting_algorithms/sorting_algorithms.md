@@ -1,3 +1,3 @@
 <section data-markdown>
-## Data Structures and Algorithms
+#### Sorting Algorithms
 </section>

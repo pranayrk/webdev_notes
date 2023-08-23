@@ -1,3 +1,4 @@
+<section data-markdown>
 ### Basic Data Structures
 
 * Dynamic Array
@@ -8,4 +9,4 @@
 * Binary Heaps & Priority Queue
 * Graphs
 * Trie
----
+</section>

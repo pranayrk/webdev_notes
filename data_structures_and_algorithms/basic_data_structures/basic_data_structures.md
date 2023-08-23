@@ -1,18 +1,10 @@
 ### Basic Data Structures
 
-
-##### Arrays
-
-##### Linked List
-
-##### Stack
-
-##### Queue
-
-##### Binary Tree
-
-##### Binary Search Tree
-
-##### Heap
-
-##### Hash Map
+* Dynamic Array
+* Linked List
+* Stack & Queue
+* Hash Tables
+* Binary Search Tree
+* Binary Heaps & Priority Queue
+* Graphs
+* Trie

@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Web Dev Notes - Pranay Raja Krishnan</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+        <link rel="stylesheet" href="css/extra/reveal_extra.css">
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+        <link rel="stylesheet" href="resources/style.css">
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                <section data-markdown>
+
+# Web Dev Notes
+#### Pranay Raja Krishnan
+---
+
+## Languages and Frameworks
+---
+
+### C
+---
+
+### Java
+---
+
+### Javascript
+---
+
+### Python
+---
+
+### HTML and CSS
+---
+
+## Data Structures and Algorithms
+---
+
+
+### Basic Data Structures
+
+* Dynamic Array
+* Linked List
+* Stack & Queue
+* Hash Tables
+* Binary Search Tree
+* Binary Heaps & Priority Queue
+* Graphs
+* Trie
+---
+
+### Basic Algorithms
+
+* Bit Manipulation & Numbers
+* Stability in Sorting
+* Mergesort
+* Quicksort
+* Heapsort — Sort it in-place to get O(1) space
+* Binary Search
+---
+### Basic Algorithms
+* Selections — Kth Smallest Elements (Sort, QuickSelect, Mediums of Mediums) — Implement all three ways
+* Permutations
+* Subsets
+* BFS Graph
+* DFS Graph
+* Dijkstra’s Algorithm (just learn the idea — no need to implement)
+---
+### Basic Algorithms
+* Tree Traversals — BFS, DFS (in-order, pre-order, post-order): Implement Recursive and Iterative
+* External Sort — No implementation; Just know the concept.
+* NP-Complete (Video) — Just know the concept
+* Topological Sort
+* Detect cycle in an undirected graph
+---
+### Basic Algorithms
+* Detect a cycle in a directed graph
+* Count connected components in a graph
+* Find strongly connected components in a graph
+* Implement an ArrayList from scratch
+* Reverse a linked list
+* Implement a Stack & a Queue using Array
+---
+### Basic Algorithms
+* Implement a HashTable with simple Hashing functions
+* Implement a Graph using Adjacency List, and then write functions for BFS & DFS.
+* Write the binary search algorithm both recursively and iteratively
+* Write the merge sort algorithm
+* Write the quicksort algorithm
+* Print binary tree using DFS (in-order, preorder and post order — all three of them) and BFS.
+---
+### Basic Algorithms
+* Memorize time & space complexities for common algorithms. [Here](https://www.bigocheatsheet.com/)’s an interesting website.
+* Implement a trie.
+* Learn [these](https://www.geeksforgeeks.org/bit-tricks-competitive-programming/) important bit manipulation tricks.
+---
+
+#### Sorting Algorithms
+---
+
+##### Bubble Sort
+```
+void bubbleSort(int arr[], int n) {
+    int i, j;
+    bool swapped;
+    for (i = 0; i < n - 1; i++) {
+        swapped = false;
+        for (j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                swap(&arr[j], &arr[j + 1]);
+                swapped = true;
+            }
+        }
+  
+        // If no two elements were swapped by inner loop,
+        // then break
+        if (swapped == false)
+            break;
+    }
+}
+```
+---
+
+## Databases and Cache
+---
+
+## Interview Specific
+---
+##### Interview Resources
+* [Jwasham's interview university](https://github.com/jwasham/coding-interview-university)
+* [iDeserve Programming Interview Questions Playlist](https://www.youtube.com/playlist?list=PLamzFoFxwoNjPfxzaWqs7cZGsPYy0x_gI)
+---
+##### Coding Problems Resources
+* [LeetCode Blind 75](https://leetcode.com/list/xi4ci4ig/)
+* [LeetCode 150](https://leetcode.com/studyplan/top-interview-150/)
+* [NeetCode 150](https://github.com/th-blitz/NeetCode-150)
+* [LeetCode Grind 75](https://www.techinterviewhandbook.org/grind75)
+* [LeetCode Interview Questions Collection](https://leetcode.com/explore/interview/card/top-interview-questions-easy/)
+* [Nick White, LeetCode Solutions Playlist](https://www.youtube.com/playlist?list=PLU_sdQYzUj2keVENTP0a5rdykRSgg9Wp-)
+* [Fisher Code, LeetCode Grind 75 Solutions](https://www.youtube.com/playlist?list=PLK0ZC7fyo01KN6t9EkPDjcwfgdn2fB30o)
+---
+
+## Other
+---
+
+                </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+        <script src="plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+                slideNumber: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
+			});
+		</script>
+	</body>
+</html>
+

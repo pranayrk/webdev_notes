@@ -1,2 +1,9 @@
 map:
-  - webdev_notes.md
+  - src/precontent.html
+  - src/webdev_notes.md
+  - src/languages
+  - src/data_structures_and_algorithms
+  - src/databases
+  - src/interview_specific
+  - src/other
+  - src/postcontent.html

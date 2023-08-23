@@ -1,0 +1,28 @@
+p, li {
+    font-size: 30px;
+}
+
+.reveal h1 {
+    font-size: 80px;
+}
+
+.reveal h2 {
+    font-size: 60px;
+}
+
+.reveal h3 {
+    font-size: 50px;
+}
+
+.reveal h4 {
+    font-size: 40px;
+}
+
+.reveal h5 {
+    font-size: 30px;
+}
+
+code {
+    font-size: 15px;
+    line-height: 1rem;
+}

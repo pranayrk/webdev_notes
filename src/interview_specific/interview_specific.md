@@ -16,5 +16,7 @@
 * [LeetCode Interview Questions Collection](https://leetcode.com/explore/interview/card/top-interview-questions-easy/)
 * [Nick White, LeetCode Solutions Playlist](https://www.youtube.com/playlist?list=PLU_sdQYzUj2keVENTP0a5rdykRSgg9Wp-)
 * [Fisher Code, LeetCode Grind 75 Solutions](https://www.youtube.com/playlist?list=PLK0ZC7fyo01KN6t9EkPDjcwfgdn2fB30o)
+* [Daily Programmer, Reddit](https://www.reddit.com/r/dailyprogrammer/)
+* [Coding Bat](https://codingbat.com/java)
 ---
 </section>

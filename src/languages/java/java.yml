@@ -1,1 +1,4 @@
-map: java.md
+map: 
+  - java.md
+  - interview_questions.md
+  - examples

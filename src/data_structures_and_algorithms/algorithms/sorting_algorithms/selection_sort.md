@@ -1,5 +1,10 @@
 <section>
 <h5>Selection Sort</h5>
+Video by theteachr, ~3 mins
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RQy_wFAmSdo?si=P_1LllEhID6CjsBA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</section>
+<section>
+<h5>Selection Sort</h5>
 <pre><code class="language-c">
 void selectionSort(int arr[], int n) {
     int i, j, min_idx;

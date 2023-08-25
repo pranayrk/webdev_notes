@@ -28,6 +28,8 @@
 * Implement a Stack & a Queue using Array
 ---
 ### Basic Algorithms
+* Two Pointers
+* Sliding Window
 * Implement a HashTable with simple Hashing functions
 * Implement a Graph using Adjacency List, and then write functions for BFS & DFS.
 * Write the binary search algorithm both recursively and iteratively

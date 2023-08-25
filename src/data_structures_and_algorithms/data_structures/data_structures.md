@@ -3,10 +3,12 @@
 
 * Dynamic Array
 * Linked List
-* Stack & Queue
+* Stack
+* Queue
 * Hash Tables
 * Binary Search Tree
-* Binary Heaps & Priority Queue
+* Binary Heaps
+* Priority Queue
 * Graphs
 * Trie
 </section>

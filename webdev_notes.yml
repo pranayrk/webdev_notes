@@ -4,6 +4,6 @@ map:
     # - src/languages
   - src/data_structures_and_algorithms
     #- src/databases
-    # - src/interview_specific
+  - src/interview_specific
     # - src/other
   - src/postcontent.html

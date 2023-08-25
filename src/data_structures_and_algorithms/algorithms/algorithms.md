@@ -1,42 +1,41 @@
 <section data-markdown>
-### Basic Algorithms
 
-* Bit Manipulation & Numbers
-* Stability in Sorting
-* Mergesort
-* Quicksort
-* Heapsort — Sort it in-place to get O(1) space
-* Binary Search
-* Selections — Kth Smallest Elements (Sort, QuickSelect, Mediums of Mediums) — Implement all three ways
-* Permutations
-* Subsets
-* BFS Graph
-* DFS Graph
-* Dijkstra’s Algorithm (just learn the idea — no need to implement)
+### Algorithms
+
 ---
-### Basic Algorithms
-* Tree Traversals — BFS, DFS (in-order, pre-order, post-order): Implement Recursive and Iterative
-* External Sort — No implementation; Just know the concept.
-* NP-Complete (Video) — Just know the concept
-* Topological Sort
-* Detect cycle in an undirected graph
-* Detect a cycle in a directed graph
-* Count connected components in a graph
-* Find strongly connected components in a graph
-* Implement an ArrayList from scratch
-* Reverse a linked list
-* Implement a Stack & a Queue using Array
+
+### Common Algorithm Questions
+
+* Sorting
+    * Bubble Sort
+    * Insertion Sort
+    * Selection Sort
+    * Quick Sort
+    * Heap Sort
+    * Merge Sort
+    * Bucket Sort
+    * Counting Sort
+    * Radix Sort
+* Searching
+    * Linear Search
+    * Binary Search (Iterative and Recursive)
 ---
-### Basic Algorithms
-* Two Pointers
-* Sliding Window
-* Implement a HashTable with simple Hashing functions
-* Implement a Graph using Adjacency List, and then write functions for BFS & DFS.
-* Write the binary search algorithm both recursively and iteratively
-* Write the merge sort algorithm
-* Write the quicksort algorithm
-* Print binary tree using DFS (in-order, preorder and post order — all three of them) and BFS.
-* Memorize time & space complexities for common algorithms. [Here](https://www.bigocheatsheet.com/)’s an interesting website.
-* Implement a trie.
-* Learn [these](https://www.geeksforgeeks.org/bit-tricks-competitive-programming/) important bit manipulation tricks.
+
+### Common Algorithm Questions
+
+* Graphs and Trees
+    * Breadth First Search
+    * Depth First Search
+    * Detecting Cycles in Directed and Undirected Graphs
+    * Shortest Path Algorithms (Djikstras)
+    * Minimum Spanning Tree
+    * Topological Sort
+    * Count connected components in a graph
+    * Find strongly connected components in a graph
+* Other
+    * Reverse a linked list
+    * Sliding Window
+    * Two pointer technique
+    * Select K-th smallest elements (Sorting based, QuickSelect, Medium of Mediums)
+    
 </section>

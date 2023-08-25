@@ -2,3 +2,4 @@ map:
   - algorithms.md
   - sorting_algorithms
   - binary_search.md
+  - graph_and_tree_algorithms

@@ -1,4 +1,5 @@
 <section data-markdown>
+
 #### Sorting Algorithms
 
 Important are:
@@ -13,5 +14,9 @@ Know the idea behind:
 * Bucket Sort
 * Counting Sort
 * Radix Sort
+
+---
+
+### Stability in Sorting
 
 </section>
